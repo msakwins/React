@@ -1,42 +1,50 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const H3 = styled.h3`
+color: blue;
+display: flex;
+`;
+
+const Button1 = styled.button`
+display: inline-block;
+border-radius: 3px;
+padding: 0.5rem 0;
+margin: 0.5rem 1rem;
+width: 11rem;
+background: tomato;
+border: 2px red;
+font-family: "Verdana", "Geneva", sans-serif;
+color: white;
+:hover {
+    background: lightsalmon;
+  }
+  `;
+
 
 function AddToCartButton() {
   return (
-    <button>Add to cart</button>
-  );
-}
-
-function Data(props) {
-  return (
     <div>
-      <h3>{props.name}</h3>
-      <span>{props.price}</span>
-      <br />{props.description}
+      <Button1>Add to cart</Button1>
     </div>
   );
 }
 
-Data.propTypes = {
-  price: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-};
-
 function ProductItem(props) {
   return (
     <div>
-      <Data
-        name={props.product.name}
-        key={props.product.id}
-        price={props.product.price}
-        description={props.product.description}
-      />
+      <H3>{props.name}</H3>
+      <span>{props.price}</span>
+      <br />{props.description}
       <AddToCartButton />
     </div>
   );
 }
 ProductItem.propTypes = {
-  product: PropTypes.object,
+  price: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
+
 export default ProductItem;

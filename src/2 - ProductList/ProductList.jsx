@@ -1,15 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
+import products from '../../mockup/data';
 import ProductItem from '../ProductItem';
 
-
-function ProductList(props) {
-  console.log(props.prodList);
+function ProductList() {
   return (
-    props.prodList.map((prod) => (<ProductItem product={prod} />))
+    <div>
+      {products.map((item) =>
+        (<ProductItem
+          name={item.name}
+          price={item.price}
+          description={item.description}
+          key={item.id}
+        />))
+      }
+    </div>
   );
 }
-ProductList.propTypes = {
-  prodList: PropTypes.array.isRequired,
-};
+
+
 export default ProductList;

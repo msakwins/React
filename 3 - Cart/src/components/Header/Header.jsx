@@ -1,13 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import Clock from '../Clock';
+import Cart from '../Cart';
 
-const H1 = styled.div`
-  background-color: #c0d190;
-  font-size: 60px;
-  padding-left: 1.5vw;
-  font-family: "Pacifico";
-  color: white;
+const All = styled.header`
+  margin-bottom: 5vw;
+`;
+
+const WhiteHeader = styled.div`
+background-color: white;
+`;
+
+const Sign = styled.div`
+  display:inline;
+  margin: 1vw;
 `;
 
 const Clocki = styled.div`
@@ -18,36 +24,43 @@ const Clocki = styled.div`
   padding-right: 1vw;
 `;
 
-const Paper = styled.div`
-  float: right;
-  padding-top: 1vw;
-  padding-right: 1vw;
+const GreenHeader = styled.div`
+  background-color: #c0d190;
 `;
 
-const Head = styled.div`
-  height: 8vw;
+const Name = styled.div`
   font-size: 60px;
+  padding-left: 1.5vw;
+  font-family: "Pacifico";
+  color: white;
+  display: inline;
 `;
 
-const BigHeader = styled.header`
-  height: 8vw;
-  margin-bottom: 5vw;
-
-  #signin {
-    display: inline;
-  }
+const Paper = styled.div`
+  font-size: 10px;
+  float: right;
 `;
 
 function Header() {
   return (
-    <BigHeader>
-      <div id="signin">Sign in</div>
-      <Clocki><Clock /></Clocki>
-      <Head>
-        <Paper><img width="50px" src="http://icon-park.com/imagefiles/paperbag_brown.png" alt="cart" /></Paper>
-        <H1>Natural</H1>
-      </Head>
-    </BigHeader>
+    <All>
+      <WhiteHeader>
+        <Sign>
+          Sign in
+        </Sign>
+        <Clocki>
+          <Clock />
+        </Clocki>
+      </WhiteHeader>
+      <GreenHeader>
+        <Name>
+          Natural
+        </Name>
+        <Paper>
+          <Cart />
+        </Paper>
+      </GreenHeader>
+    </All>
   );
 }
 

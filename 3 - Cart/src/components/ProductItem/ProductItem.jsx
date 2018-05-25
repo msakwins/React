@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const Button1 = styled.button`
 display: inline-block;
 border-radius: 2px;
+margin: 1vw;
 width: 8rem;
 height: 3rem;
 background: #ffd644;
@@ -19,21 +20,21 @@ outline: none;
 `;
 
 const Img = styled.img`
-height:52px;
-width: 90px;
-border: 2px solid #c0d190;
+height:140px;
+width: 170px;
+border: 2px solid #ebffc1;
 border-radius: 2px;
-padding: 1rem;
-padding-bottom: 1.3rem;
+padding: 1vw;;
+padding-bottom: 1.3vw;
 `;
 
 const Struct = styled.div`
 text-align: center;
 display: inline-block;
-margin-top: 3vw;
-margin-left: 1vw;
-margin-right: 1vw
-margin-bottom: 2vw;
+width: 170px;
+height: 215px;
+box-sizing: content-box;
+padding: 1vw;
 `;
 
 const Item = styled.div`
